@@ -182,3 +182,6 @@ if (isset($_POST['checkout'])) {
         </div>
     <?php } ?>
 </div>
+</div>
+</body>
+</html>
