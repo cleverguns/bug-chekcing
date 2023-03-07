@@ -185,6 +185,20 @@ if (!isset($user_id)) {
     <!-- jQuery -->
 
     <script>
+//pa try ito pre
+function calculateTotal() {
+  var total = 0;
+  var checkboxes = document.getElementsByName("check");
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      var itemPrice = parseFloat(checkboxes[i].value);
+      total += itemPrice;
+    }
+  }
+  document.getElementById("totalPrice").innerHTML = total.toFixed(2);
+}
+
+/////
         let userId = "<?= !empty($user_id) ?>";
 
         $('.quantity button').on('click', function() {
